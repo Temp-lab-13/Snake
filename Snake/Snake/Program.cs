@@ -7,7 +7,7 @@ namespace Snake
         static void Main(string[] args)
         {
             PoinOutput p1 = new PoinOutput(1, 3, '*');
-            //p1.x = 1;
+            //p1.x = 1; развёрнутая реализация в не конструкта
             //p1.y = 3;
             //p1.symbol = '*';
             p1.Draw();
