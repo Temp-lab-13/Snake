@@ -12,7 +12,7 @@ namespace Snake
         {
             foreach (PoinOutput p in pList)
             {
-                p.Draw();
+                p.Drow();
             }
         }
 

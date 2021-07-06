@@ -10,6 +10,10 @@ namespace Snake
         public int y;
         public char symbol;
 
+        public PoinOutput()
+        {
+        }
+
         public PoinOutput(int X, int Y, char Symbol)
         {
             x = X;
@@ -28,7 +32,7 @@ namespace Snake
         {
             if (direction == Direction.RIGHT)
             {
-                x = x - offset;
+                x = x + offset;
             }
             else if (direction == Direction.LEFT)
             {
@@ -40,7 +44,7 @@ namespace Snake
             }
             else if (direction == Direction.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
 
@@ -50,7 +54,7 @@ namespace Snake
             return x + ", " + y + ", " + symbol;
         }
 
-        public void Draw()
+        public void Drow()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(symbol);
