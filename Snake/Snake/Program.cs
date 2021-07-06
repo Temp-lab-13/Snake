@@ -6,18 +6,18 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            Console.SetBufferSize(80, 25);
+
             PoinOutput p1 = new PoinOutput(1, 3, '*');
             p1.Draw();
-            PoinOutput p2 = new PoinOutput(4, 5, '#');
-            p2.Draw();
 
-            HorisonLine LineX = new HorisonLine(1, 15, 10, '-');
+            HorisonLine LineX = new HorisonLine(0, 78, 24, '+');
             LineX.Drow();
-            HorisonLine xLine = new HorisonLine(1, 15, 0, '-');
+            HorisonLine xLine = new HorisonLine(0, 78, 0, '+');
             xLine.Drow();
-            VerticalLine vLine = new VerticalLine(0, 10, 0, '|');
+            VerticalLine vLine = new VerticalLine(0, 24, 0, '+');
             vLine.Drow();
-            VerticalLine LineV = new VerticalLine(0, 10, 16, '|');
+            VerticalLine LineV = new VerticalLine(0, 24, 78, '+');
             LineV.Drow();
 
             Console.ReadLine();

@@ -4,10 +4,8 @@ using System.Text;
 
 namespace Snake
 {
-    class HorisonLine
+    class HorisonLine : Figure
     {
-        List<PoinOutput> pList;
-
         public HorisonLine(int xLeft, int xRight, int y, char symbol)
         {
             pList = new List<PoinOutput>();
@@ -17,14 +15,5 @@ namespace Snake
                 pList.Add(p);
             }
         }
-
-        public void Drow()
-        {
-            foreach(PoinOutput p in pList)
-            {
-                p.Draw();
-            }
-        }
-
     }
 }
