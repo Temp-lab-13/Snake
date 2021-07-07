@@ -50,5 +50,21 @@ namespace Snake
             else if (key == ConsoleKey.UpArrow)
                 direction = Direction.UP;
         }
+
+        internal bool Eat(PoinOutput food)
+        {
+            PoinOutput head = this.pList.Last();
+            //PoinOutput head = GetNextPoint(); вариант из видео заменён на вариант из коментариев.
+            if (head.IsHit(food))
+            {
+                food.symbol = head.symbol;
+                pList.Add(food);
+                return true;
+            }
+            else
+                return false;
+        }
+            
+
     }
 }

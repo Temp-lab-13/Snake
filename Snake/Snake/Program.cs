@@ -23,15 +23,30 @@ namespace Snake
             Snaake snake = new Snaake(p, 4, Direction.RIGHT);
             snake.Drow();
 
-            while(true)
+            FoodCreator foodCreator = new FoodCreator(80, 25, '#');
+            PoinOutput food = foodCreator.CreaterFood();
+            food.Drow();
+
+            while (true)
             {
-                if(Console.KeyAvailable)
+                if(snake.Eat(food))
+                {
+                    food = foodCreator.CreaterFood();
+                    food.Drow();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);
+
+                if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandKey(key.Key);
                 }
-                Thread.Sleep(100);
-                snake.Move();
+                
             }
 
            
