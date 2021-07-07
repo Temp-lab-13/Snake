@@ -10,6 +10,7 @@ namespace Snake
 
         public void Drow()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             foreach (PoinOutput p in pList)
             {
                 p.Drow();
