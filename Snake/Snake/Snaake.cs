@@ -7,7 +7,7 @@ namespace Snake
 {
     class Snaake : Figure
     {
-        Direction direction;
+        public Direction direction;
         public Snaake(PoinOutput tail, int lenght, Direction _direction)
         {
             direction = _direction;
