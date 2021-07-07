@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Snake
 {
@@ -21,6 +22,20 @@ namespace Snake
             PoinOutput p = new PoinOutput(4, 5, '*');
             Snaake snake = new Snaake(p, 4, Direction.RIGHT);
             snake.Drow();
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+
 
             Console.ReadLine();
 
