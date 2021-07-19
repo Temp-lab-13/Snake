@@ -39,6 +39,17 @@ namespace Snake
             return nextPoint;
         }
 
+        internal bool IsHitTail()
+        {
+            var head = pList.Last();
+            for (int i = 0; i < pList.Count - 2; i++)
+            {
+                if (head.IsHit(pList[i]))
+                    return true;
+            }
+            return false;
+        }
+
         public void HandKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)
@@ -53,8 +64,8 @@ namespace Snake
 
         internal bool Eat(PoinOutput food)
         {
-            PoinOutput head = this.pList.Last();
-            //PoinOutput head = GetNextPoint(); вариант из видео заменён на вариант из коментариев.
+            //PoinOutput head = this.pList.Last();
+            PoinOutput head = GetNextPoint(); //вариант из видео заменён на вариант из коментариев.
             if (head.IsHit(food))
             {
                 food.symbol = head.symbol;
