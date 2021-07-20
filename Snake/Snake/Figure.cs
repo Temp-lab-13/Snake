@@ -8,9 +8,9 @@ namespace Snake
     {
         protected List<PoinOutput> pList;
 
-        public void Drow()
+        public virtual void Drow()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            //Console.ForegroundColor = ConsoleColor.Yellow;
             foreach (PoinOutput p in pList)
             {
                 p.Drow();

@@ -20,6 +20,13 @@ namespace Snake
             }
         }
 
+        public override void Drow()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            base.Drow();
+        }
+
         internal void Move()
         {
             PoinOutput tail = pList.First();
@@ -64,8 +71,8 @@ namespace Snake
 
         internal bool Eat(PoinOutput food)
         {
-            //PoinOutput head = this.pList.Last();
-            PoinOutput head = GetNextPoint(); //вариант из видео заменён на вариант из коментариев.
+            PoinOutput head = this.pList.Last();
+            //PoinOutput head = GetNextPoint(); //вариант из видео заменён на вариант из коментариев.
             if (head.IsHit(food))
             {
                 food.symbol = head.symbol;
